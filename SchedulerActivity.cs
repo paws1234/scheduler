@@ -133,15 +133,15 @@ namespace sched
 
             updateButton.Click += (sender, e) =>
             {
-                // Update the selected scheduler directly
+               
                 scheduler.Title = popupTitleEditText.Text.Trim();
                 scheduler.Description = popupDescriptionEditText.Text.Trim();
                 scheduler.Date = popupDateEditText.Text.Trim();
 
-                // Update the scheduler object in the database
+               
                 DatabaseHelper.Instance.SchedulerDatabaseHelper.UpdateScheduler(scheduler);
 
-                // Notify the adapter that the data has changed
+                
                 schedulerAdapter.NotifyDataSetChanged();
 
                 dialog.Dismiss();
