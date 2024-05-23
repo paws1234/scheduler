@@ -1,8 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
 
     <TextView
         android:id="@+id/WelcomeLabel"
@@ -11,29 +15,38 @@
         android:text="Welcome to Sched!"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/WelcomeLabel">
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/WelcomeLabel"
+        android:layout_marginTop="16dp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/registerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="StartRegistrationActivity"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            style="@style/Widget.MaterialComponents.Button"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:onClick="StartLoginActivity"/>
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="StartLoginActivity"
+            style="@style/Widget.MaterialComponents.Button"/>
 
     </LinearLayout>
 

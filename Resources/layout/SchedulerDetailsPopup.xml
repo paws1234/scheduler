@@ -1,45 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
 
     <EditText
         android:id="@+id/popupTitleEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title" />
+        android:hint="Title"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
 
     <EditText
         android:id="@+id/popupDescriptionEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description" />
+        android:hint="Description"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
 
     <EditText
         android:id="@+id/popupDateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date (YYYY-MM-DD)" />
+        android:hint="Date (YYYY-MM-DD)"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/popupUpdateButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Update" />
+            android:text="Update"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/updateButtonColor"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            style="@style/Widget.MaterialComponents.Button"/>
 
         <Button
             android:id="@+id/popupDeleteButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Delete" />
+            android:text="Delete"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/deleteButtonColor"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            style="@style/Widget.MaterialComponents.Button"/>
     </LinearLayout>
 
 </LinearLayout>

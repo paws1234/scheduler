@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
 
-     <TextView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -28,21 +34,29 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textColor="@android:color/white"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
         android:onClick="RegisterClick" />
-
 </LinearLayout>
